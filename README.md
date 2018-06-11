@@ -1,8 +1,26 @@
 # holidayNode
 A node to use the information from [holidayAPI.com](https://holidayapi.com/) within the SPSS Modeler natively.
 
-## Usage
-Whilst there is no help guide yet, I will add documentation whilst appending functionality.
+## The Node
+![The holiday node when opened](https://raw.githubusercontent.com/avantumLSW/holidayNode/master/Node.JPG "The holiday node when opened")
+As you can see in the screenshot provided, there are not that many options required to use the node. The node itself is just some kind of wrapper function to communicate with the RESTAPI provided by holidayapi.
+Therefore the options are mostly the same as they are on the website.
+### Required Parameters
+| Parameter  | Explanation |
+| ---------- | ----------- |
+| key        | your API key |
+| country    | ISO 3166-2 format |
+| year       | ISO 8601 format |
+### Optional Parameters
+| Parameter  | Explanation |
+| ---------- | ----------- |
+| month | 1 or 2 digit month (1-12) |
+| day | 1 or 2 digit day (1-31 depending on the month) |
+| previous | boolean, return previous holidays based on the date |
+| upcoming | boolean, return upcoming holidays based on the date |
+| public | boolean, return only public holidays |
+
+## Installation
 Here is a quick guide for an easy start:
 1. Create an account at [holidayAPI.com](https://holidayapi.com/)
     * Keep in mind you need a payed account for commercial use.
