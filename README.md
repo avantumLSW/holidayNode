@@ -3,6 +3,7 @@ A node to use the information from [holidayAPI.com](https://holidayapi.com/) wit
 
 ## The Node
 ![The holiday node when opened](https://raw.githubusercontent.com/avantumLSW/holidayNode/master/Node.JPG "The holiday node when opened")
+
 As you can see in the screenshot provided, there are not that many options required to use the node. The node itself is just some kind of wrapper function to communicate with the RESTAPI provided by holidayapi.
 Therefore the options are mostly the same as they are on the website.
 ### Required Parameters
