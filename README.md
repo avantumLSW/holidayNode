@@ -36,4 +36,5 @@ For usage please assure to have the dependencies (json and requests) installed f
 
 ## avantum
 [![avantum](https://www.avantum.de/typo3conf/ext/website_avantum/Resources/Public/Media/layout/avantum-logo-2018-9.png "avantum consult AG")](https://www.avantum.de/)
+
 This node is created by [avantum](https://www.avantum.de/).
