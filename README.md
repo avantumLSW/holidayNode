@@ -3,6 +3,7 @@ A node to use the information from [holidayAPI.com](https://holidayapi.com/) wit
 
 ## The Node
 ![The holiday node when opened](https://raw.githubusercontent.com/avantumLSW/holidayNode/master/Node.JPG "The holiday node when opened")
+
 As you can see in the screenshot provided, there are not that many options required to use the node. The node itself is just some kind of wrapper function to communicate with the RESTAPI provided by holidayapi.
 Therefore the options are mostly the same as they are on the website.
 ### Required Parameters
@@ -32,3 +33,8 @@ Here is a quick guide for an easy start:
 
 ## Dependencies
 For usage please assure to have the dependencies (json and requests) installed for the python version located within your Modeler installation.
+
+## avantum
+[![avantum](https://www.avantum.de/typo3conf/ext/website_avantum/Resources/Public/Media/layout/avantum-logo-2018-9.png "avantum consult AG")](https://www.avantum.de/)
+
+This node is created by [avantum](https://www.avantum.de/).
