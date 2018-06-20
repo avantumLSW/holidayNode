@@ -23,13 +23,15 @@ behaviour = "%%item_bodb%%".strip()
 
 payload = {'country':country, 'year':year, 'key':key, 'public':public}
 
-if month and day:
+if month:
 	payload['month'] = month
-	payload['day'] = day
-if not behaviour == "empty":
-	payload[behaviour] = "TRUE"
+	if day:
+		payload['day'] = day
+		if not behaviour == "empty":
+			payload[behaviour] = "TRUE"
 
 print(payload)
+print("")
 
 dateField = StructField("Date", StringType(), nullable = False)
 nameField = StructField("Name", StringType(), nullable = False)
@@ -49,8 +51,8 @@ else:
 		# json.loads takes in only binary or string variables so using content to fetch binary content
 		# Loads (Load String) takes a Json file and converts into python data structure (dict or list, depending on JSON)
 		jData = json.loads(myResponse.content)	
-		print("The response contains {0} properties".format(len(jData)))
 		print("")
+		print("The response contains {0} properties".format(len(jData)))
 		for key in jData:
 			if key == "holidays":
 				dict = jData[key]
@@ -59,12 +61,14 @@ else:
 						#print(str(info) + " : " + str(type(dict[info])))
 						if type(dict[info]) == type([]):
 							line = dict[info][0]
-							print(line)
 							data.append((line['date'], line['name'], str(line['public'])))
-						else:
-							print(type(dict[info]))
-				else:
-					print(type(dict))
+				if type(dict) == type([]):
+					print("dict is list.")
+					print(dict)
+					for line in dict:
+						if type(line) == type({}):
+								data.append((line['date'], line['name'], str(line['public'])))
+
 	else:
 		# If response code is not ok (200), print the resulting http error code with description
 		data.append(("Statuscode",myResponse.status_code,"given"))
